@@ -1,20 +1,35 @@
 import { useEffect, useState } from "react";
 import { getRandomRecipe } from "../../api/spoonacular";
-
+import "./GuestPage.css";
 
 export default function GuestPage() {
   const [recipe, setRecipe] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getRandomRecipe().then(setRecipe);
+    async function fetchRecipe() {
+      try {
+        const data = await getRandomRecipe();
+        setRecipe(data);
+      } catch (err) {
+        console.error("Error fetching recipe:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchRecipe();
   }, []);
 
-  if (!recipe) return <p>Loading random recipe...</p>;
+  if (loading) return <div className="loading">Loading recipe of the day...</div>;
+  if (!recipe) return <div className="error">Failed to load recipe 😢</div>;
 
   return (
-    <div>
-      <h2>{recipe.title}</h2>
-      <img src={recipe.image} alt={recipe.title} />
+    <div className="recipe-card">
+      <h2 className="title">🍽️ Recipe of the Day</h2>
+      <img className="image" src={recipe.image} alt={recipe.title} />
+      <h3 className="recipe-title">{recipe.title}</h3>
+      <p className="summary" dangerouslySetInnerHTML={{ __html: recipe.summary }} />
     </div>
   );
 }
+

@@ -9,3 +9,52 @@
   padding: 2rem;
   background-color: var(--secondary-background-color);
 }
+
+
+/* 🍽️ Recipe of the Day card styles */
+.recipe-card {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff8f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
+.image {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.title {
+  color: #e67e22;
+  font-size: 1.6rem;
+}
+
+.recipe-title {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.summary {
+  color: #444;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 50px;
+  color: #555;
+}
