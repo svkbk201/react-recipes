@@ -1,9 +1,30 @@
 import { useEffect, useState } from "react";
 import { getRandomRecipe } from "../../api/spoonacular";
 import "./GuestPage.css";
+import { useSelector } from "react-redux";
+import { addFavorite } from "../../api/favorites";
 
 export default function GuestPage() {
   const [recipe, setRecipe] = useState(null);
+  const user = useSelector((state) => state.user.user);
+  async function handleSaveFavorite() {
+  if (!user) {
+    alert("Please log in to save recipes ❤️");
+    return;
+  }
+  try {
+    await addFavorite({
+      userId: user.id,
+      recipeId: recipe.id,
+      title: recipe.title,
+      image: recipe.image,
+    });
+    alert("Recipe added to favorites!");
+  } catch (err) {
+    console.error(err);
+    alert("Could not save recipe.");
+  }
+}
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,6 +54,7 @@ export default function GuestPage() {
               className="summary"
               dangerouslySetInnerHTML={{ __html: recipe.summary }}
             />
+            <button className="fav-btn" onClick={handleSaveFavorite}>❤️ Save</button>
           </div>
         )}
         {!loading && !recipe && (

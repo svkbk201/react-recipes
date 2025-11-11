@@ -1,54 +1,54 @@
-import GuestPage from './pages/GuestPage'
-import UserHomePage from './pages/UserHomePage'
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
-import NavigationBar from './components/NavigationBar';
-import CartManager from "./manager/CartManager";
-import AdminPage from './pages/AdminPage';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import './App.css'
+import NavigationBar from "./components/NavigationBar";
+import GuestPage from "./pages/GuestPage";
+import UserHomePage from "./pages/UserHomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import CartManager from "./manager/CartManager";
+import AdminPage from "./pages/AdminPage";
+import Favorites from "./pages/Favorites";
+
+import "./App.css";
 
 function App() {
-
   const role = useSelector((state) => state.user.role);
 
+  // Determine which homepage to show
   const getHomePage = () => {
     if (role === "admin") return <AdminPage />;
     if (role === "user") return <UserHomePage />;
     return <GuestPage />;
   };
 
-
   return (
-    <>
-      <BrowserRouter>
-        <NavigationBar />
-        <Routes>
-          <Route path="/" element={<GuestPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          {
-            role === "user" ?
-              <>
-                <Route path="/" element={<UserHomePage />} />
-                <Route path="/cart" element = {<CartManager/>} />
-              </>
-              : role === "admin" ?
-                <>
-                  <Route path="/" element={<AdminPage />} />
-                </>
-                :
-                <>
-                  <Route path="/" element={<GuestPage />} />
-                </>
-          }
-          <Route path="*" element={getHomePage()} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <BrowserRouter>
+      <NavigationBar />
+      <Routes>
+        {/* Default homepage dynamically based on role */}
+        <Route path="/" element={getHomePage()} />
+
+        {/* Auth routes */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
+        {/* User-specific routes */}
+        {role === "user" && (
+          <>
+            <Route path="/cart" element={<CartManager />} />
+            <Route path="/favorites" element={<Favorites />} />
+          </>
+        )}
+
+        {/* Admin-specific routes */}
+        {role === "admin" && <Route path="/admin" element={<AdminPage />} />}
+
+        {/* Catch-all redirect */}
+        <Route path="*" element={getHomePage()} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
