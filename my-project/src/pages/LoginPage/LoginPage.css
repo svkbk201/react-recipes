@@ -1,0 +1,77 @@
+.login-page {
+  display: flex; /* Helps with vertical centering if needed */
+  align-items: flex-start; /* Aligns form to the top */
+  min-height: 100vh;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-container {
+  /* --- Reduced width from 400px to 350px --- */
+  max-width: 350px; 
+  width: 100%; /* Ensures responsiveness on small screens */
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+/* Use padding-box to prevent width change on focus */
+.form-container input {
+  box-sizing: border-box; 
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--card-border-color);
+  background-color: var(--secondary-background-color);
+  color: var(--primary-text-color);
+}
+
+.form-container button {
+  width: 100%;
+  margin-top: 1.5rem;
+  background-color: var(--link-color);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-container button:hover {
+  background-color: var(--link-hover-color);
+}
+
+/* --- Styles for the new link --- */
+.back-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.back-link a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
