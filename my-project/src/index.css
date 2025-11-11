@@ -1,0 +1,90 @@
+/*
+ * Defines CSS variables for colors.
+ * Default values are for the light theme.
+*/
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 1280px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* THEME COLOR VARIABLES */
+  --primary-text-color: #213547;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #f5f6fa; /* For main content area */
+  --card-background-color: #ffffff;      /* For product cards, details */
+  --card-border-color: #ddd;
+  --button-background-color: #f9f9f9;
+  --nav-btn-background-color: #ffffff;
+  --nav-btn-text-color: #007bff;
+  --link-color: #646cff;
+  --link-hover-color: #747bff;
+}
+
+/*
+ * Overrides for the dark theme.
+ * This is activated by the data-theme="dark" attribute on the body tag.
+*/
+body[data-theme="dark"] {
+  --primary-text-color: rgba(255, 255, 255, 0.87);
+  --primary-background-color: #242424;
+  --secondary-background-color: #1e1e1e;
+  --card-background-color: #1a1a1a;
+  --card-border-color: #444;
+  --button-background-color: #1a1a1a;
+  --nav-btn-background-color: #333;
+  --nav-btn-text-color: #ffffff;
+  --link-hover-color: #535bf2;
+}
+
+/* Apply the variables to global elements */
+body {
+  margin: 0;
+  --body-max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-background-color);
+  color: inherit; /* Inherit text color from the body */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

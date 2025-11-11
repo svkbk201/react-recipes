@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "password":"12345",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "role": "user",
+      "password":"12345",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "role": "user",
+      "password":"12345",
+      "isActive": false
+    },
+    {
+      "id": "8b77",
+      "name": "ashwin",
+      "email": "ashwin@gmail.com",
+      "password":"12345",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "aec2",
+      "name": "Ashwin",
+      "email": "a@a.com",
+      "password": "123123123",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "6953",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "pass",
+      "role": "admin",
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "price": 25.99,
+      "availability": true,
+      "desc": "A smooth and responsive wireless mouse.",
+      "image": "https://via.placeholder.com/200x150?text=Wireless+Mouse"
+    },
+    {
+      "id": "2",
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 19.99,
+      "availability": true,
+      "desc": "Eco-friendly yoga mat with non-slip surface.",
+      "image": "https://via.placeholder.com/200x150?text=Yoga+Mat"
+    },
+    {
+      "id": "3",
+      "name": "Coffee Maker",
+      "category": "Home Appliances",
+      "price": 79.99,
+      "availability": false,
+      "desc": "Programmable coffee maker with 12-cup capacity.",
+      "image": "https://via.placeholder.com/200x150?text=Coffee+Maker"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "8b77",
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": 71.97,
+      "status": "pending",
+      "createdAt": "2025-10-24T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "userId": "8b77",
+      "products": [
+        {
+          "productId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": 79.99,
+      "status": "completed",
+      "createdAt": "2025-10-23T15:30:00Z"
+    }
+  ]
+}
