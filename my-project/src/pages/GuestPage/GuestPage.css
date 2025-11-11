@@ -75,3 +75,21 @@
   background-color: #d35400;
   transform: scale(1.05);
 }
+
+.search-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.search-section h2 {
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 20px;
+}

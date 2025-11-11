@@ -43,3 +43,19 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-color: var(--secondary-background-color);
+  color: #333;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button, .nav-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover, .nav-btn:hover {
+  transform: scale(1.05);
+}

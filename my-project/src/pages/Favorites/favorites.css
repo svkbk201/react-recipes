@@ -63,3 +63,9 @@
     width: 90%;
   }
 }
+
+.fav-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

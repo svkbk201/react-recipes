@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 import { toggleTheme } from "../../store/themeSlice";
 import { logout } from "../../store/userSlice";
-import { fetchPendingOrders } from "../../store/orderSlice";
 
 import "./NavigationBar.css";
 
@@ -15,14 +14,9 @@ const NavigationBar = () => {
   const theme = useSelector((state) => state.theme.mode);
   const user = useSelector((state) => state.user.user);
   const role = useSelector((state) => state.user.role);
-  const pendingCount = useSelector((state) => state.orders.pendingCount);
+  
 
-  // Fetch pending orders for regular users
-  useEffect(() => {
-    if (role === "user" && user) {
-      dispatch(fetchPendingOrders());
-    }
-  }, [dispatch, role, user]);
+ 
 
   // Handle logout and redirect
   const handleLogout = () => {
@@ -35,11 +29,6 @@ const NavigationBar = () => {
     <nav className="nav-bar">
       {/* Left Section: App Logo and Title */}
       <div className="nav-left">
-        <img
-          src="/logo192.png"
-          alt="App Icon"
-          className="project-icon"
-        />
         <span className="project-name">Recipe Portal</span>
       </div>
 
@@ -59,9 +48,7 @@ const NavigationBar = () => {
             <Link to="/saved-meal-plans" className="nav-btn">🗂️ My Meal Plans</Link>
             <Link to="/advanced-search" className="nav-btn">🔍 Advanced Search</Link>
 
-            <span className="pending-orders">
-              Pending Orders: <strong>{pendingCount}</strong>
-            </span>
+           
             <button className="nav-btn" onClick={handleLogout}>
               Logout
             </button>

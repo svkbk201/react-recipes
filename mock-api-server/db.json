@@ -14,6 +14,14 @@
       "password": "Shakthi241",
       "role": "user",
       "isActive": true
+    },
+    {
+      "id": "6953",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "pass",
+      "role": "admin",
+      "isActive": true
     }
   ],
   "favorites": [
@@ -30,6 +38,20 @@
       "recipeId": 798400,
       "title": "Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant",
       "image": "https://img.spoonacular.com/recipes/798400-312x231.jpg"
+    },
+    {
+      "id": "6eb9",
+      "userId": "dfd5",
+      "recipeId": 648470,
+      "title": "Japanese Curry Puffs",
+      "image": "https://img.spoonacular.com/recipes/648470-312x231.jpg"
+    },
+    {
+      "id": "6ef1",
+      "userId": "dfd5",
+      "recipeId": 633955,
+      "title": "Balsamic-Honey Chicken Drumsticks",
+      "image": "https://img.spoonacular.com/recipes/633955-556x370.jpg"
     }
   ],
   "mealPlans": [
