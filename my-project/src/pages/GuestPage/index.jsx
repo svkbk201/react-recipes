@@ -20,16 +20,25 @@ export default function GuestPage() {
     fetchRecipe();
   }, []);
 
-  if (loading) return <div className="loading">Loading recipe of the day...</div>;
-  if (!recipe) return <div className="error">Failed to load recipe 😢</div>;
-
   return (
-    <div className="recipe-card">
-      <h2 className="title">🍽️ Recipe of the Day</h2>
-      <img className="image" src={recipe.image} alt={recipe.title} />
-      <h3 className="recipe-title">{recipe.title}</h3>
-      <p className="summary" dangerouslySetInnerHTML={{ __html: recipe.summary }} />
+    <div className="home-page">
+      <main className="main-content">
+        {loading && <div className="loading">Loading recipe of the day...</div>}
+        {!loading && recipe && (
+          <div className="recipe-card">
+            <h2 className="title">🍽️ Recipe of the Day</h2>
+            <img className="image" src={recipe.image} alt={recipe.title} />
+            <h3 className="recipe-title">{recipe.title}</h3>
+            <p
+              className="summary"
+              dangerouslySetInnerHTML={{ __html: recipe.summary }}
+            />
+          </div>
+        )}
+        {!loading && !recipe && (
+          <div className="error">Failed to load recipe 😢</div>
+        )}
+      </main>
     </div>
   );
 }
-

@@ -1,82 +1,85 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import { setTheme, toggleTheme } from "../../store/themeSlice";
+import { toggleTheme } from "../../store/themeSlice";
 import { logout } from "../../store/userSlice";
-import { fetchPendingOrders } from "../../store/orderSlice"; 
-
-
+import { fetchPendingOrders } from "../../store/orderSlice";
 
 import "./NavigationBar.css";
 
 const NavigationBar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const theme = useSelector((state) => state.theme.mode);
   const user = useSelector((state) => state.user.user);
   const role = useSelector((state) => state.user.role);
-  const pendingCount = useSelector((state) => state.orders.pendingCount); 
+  const pendingCount = useSelector((state) => state.orders.pendingCount);
 
-  const dispatch = useDispatch();
-
+  // Fetch pending orders for regular users
   useEffect(() => {
     if (role === "user" && user) {
       dispatch(fetchPendingOrders());
     }
   }, [dispatch, role, user]);
 
-//  useEffect(() => {
-//   dispatch(toggleTheme());
-// }, [theme]);
-
+  // Handle logout and redirect
+  const handleLogout = () => {
+    dispatch(logout());
+    alert("Logged out successfully!");
+    navigate("/login");
+  };
 
   return (
     <nav className="nav-bar">
+      {/* Left Section: App Logo and Title */}
       <div className="nav-left">
         <img
-          src="https://via.placeholder.com/40"
-          alt="Project Icon"
+          src="/logo192.png"
+          alt="App Icon"
           className="project-icon"
         />
-        <span className="project-name">Product Portal</span>
+        <span className="project-name">Recipe Portal</span>
       </div>
 
+      {/* Right Section: Links and Buttons */}
       <div className="nav-right">
+        {/* Theme Toggle */}
         <button className="nav-btn" onClick={() => dispatch(toggleTheme())}>
           {theme === "light" ? "Dark" : "Light"}
         </button>
+
+        {/* Authenticated User View */}
         {role === "user" ? (
           <>
             <Link to="/" className="user-name">{user?.name}</Link>
+            <Link to="/favorites" className="nav-btn">❤️ Favorites</Link>
+            <Link to="/meal-planner" className="nav-btn">📅 Meal Planner</Link>
             <span className="pending-orders">
               Pending Orders: <strong>{pendingCount}</strong>
             </span>
-            <button className="nav-btn" onClick={() => dispatch(logout())}>
+            <button className="nav-btn" onClick={handleLogout}>
               Logout
             </button>
           </>
         ) : role === "admin" ? (
           <>
             <span className="user-name">{user?.name}</span>
-            <Link to="/admin" className="nav-btn">
-              Admin Panel
-            </Link>
-            <button className="nav-btn" onClick={() => dispatch(logout())}>
+            <Link to="/admin" className="nav-btn">Admin Panel</Link>
+            <button className="nav-btn" onClick={handleLogout}>
               Logout
             </button>
           </>
         ) : (
+          // Guest View
           <>
-            <Link to="/login" className="nav-btn">
-              Login
-            </Link>
-            <Link to="/register" className="nav-btn">
-              Register
-            </Link>
+            <Link to="/login" className="nav-btn">Login</Link>
+            <Link to="/register" className="nav-btn">Register</Link>
           </>
         )}
       </div>
     </nav>
-
   );
 };
 
