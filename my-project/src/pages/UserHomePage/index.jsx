@@ -3,6 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./UserHomePage.css";
+import { addFavorite } from "../../api/favorites";
+
 
 const UserHomePage = () => {
   const apiKey = import.meta.env.VITE_SPOON_KEY;
@@ -10,6 +12,22 @@ const UserHomePage = () => {
   const navigate = useNavigate();
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
+  const handleAddFavorite = async () => {
+  if (!user || !recipe) return;
+  try {
+    const fav = {
+      userId: user.id,
+      recipeId: recipe.id,
+      title: recipe.title,
+      image: recipe.image,
+    };
+    await addFavorite(fav);
+    alert("Added to favorites!");
+  } catch (err) {
+    console.error("Failed to add favorite:", err);
+    alert("Could not add favorite. Try again later.");
+  }
+};
 
   useEffect(() => {
     if (!user) {
@@ -53,6 +71,7 @@ const UserHomePage = () => {
   }}
 />
             <div className="recipe-links">
+               <button className="nav-btn" onClick={handleAddFavorite}>➕ Add to Favorites</button>
               <Link to="/favorites" className="nav-btn">
                 ❤️ View Favorites
               </Link>
