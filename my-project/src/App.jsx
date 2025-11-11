@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
+import AdvancedSearch from "./pages/AdvancedSearch"
 
 import NavigationBar from "./components/NavigationBar";
 import GuestPage from "./pages/GuestPage";
@@ -38,6 +39,7 @@ function App() {
           <>
             <Route path="/cart" element={<CartManager />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/advanced-search" element={<AdvancedSearch />} />
           </>
         )}
 

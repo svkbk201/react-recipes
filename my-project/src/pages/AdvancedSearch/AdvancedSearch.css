@@ -1,0 +1,52 @@
+.advanced-search {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--secondary-background-color);
+}
+
+.filters {
+  background: #fff8f0;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.recipe-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.add-fav-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-fav-btn:hover {
+  background-color: #d35400;
+}
+
