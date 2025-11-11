@@ -52,6 +52,275 @@
           }
         }
       }
+    },
+    {
+      "id": "3eab",
+      "userId": "dfd5",
+      "name": "My Weekly Plan",
+      "week": "2025-11-11",
+      "planData": {
+        "week": {
+          "monday": {
+            "meals": [
+              {
+                "id": 664054,
+                "image": "Turkey-Sausage--Chard---Sweet-Potato-Breakfast-Scramble-664054.jpg",
+                "imageType": "jpg",
+                "title": "Turkey Sausage, Chard & Sweet Potato Breakfast Scramble",
+                "readyInMinutes": 45,
+                "servings": 2,
+                "sourceUrl": "https://www.foodista.com/recipe/S3LTQRHW/turkey-sausage-chard-sweet-potato-breakfast-scramble"
+              },
+              {
+                "id": 643634,
+                "image": "Fresh-Tomatoes-With-Beans-and-Macaroni-643634.jpg",
+                "imageType": "jpg",
+                "title": "Macaroni with Fresh Tomatoes and Beans",
+                "readyInMinutes": 25,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/LY45JTQD/fresh-tomatoes-with-beans-and-macaroni"
+              },
+              {
+                "id": 638316,
+                "image": null,
+                "imageType": "jpg",
+                "title": "Chicken Shawarma Bowl",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/FYBFJS4M/chicken-shawarma-bowl"
+              }
+            ],
+            "nutrients": {
+              "calories": 1999.75,
+              "protein": 103.68,
+              "fat": 77.21,
+              "carbohydrates": 226.82
+            }
+          },
+          "tuesday": {
+            "meals": [
+              {
+                "id": 640767,
+                "image": "Crepes-Suzette-640767.jpg",
+                "imageType": "jpg",
+                "title": "Crepes Suzette",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/KD8ZMRJ6/crepes-suzette"
+              },
+              {
+                "id": 642681,
+                "image": "Fesenjan-642681.jpg",
+                "imageType": "jpg",
+                "title": "Fesenjan Chicken Stew",
+                "readyInMinutes": 30,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/KRVYLC3H/fesenjan"
+              },
+              {
+                "id": 654331,
+                "image": "Paella-Catalane-With-Mussels--Squid---Crevettes-654331.jpg",
+                "imageType": "jpg",
+                "title": "Paella Catalane With Mussels, Squid & Crevettes",
+                "readyInMinutes": 45,
+                "servings": 10,
+                "sourceUrl": "https://www.foodista.com/recipe/SVHX43GF/paella-catalane-with-mussels-squid-crevettes"
+              }
+            ],
+            "nutrients": {
+              "calories": 2000.07,
+              "protein": 82.86,
+              "fat": 130.59,
+              "carbohydrates": 127.84
+            }
+          },
+          "wednesday": {
+            "meals": [
+              {
+                "id": 635964,
+                "image": "Bread-Omlette-635964.jpg",
+                "imageType": "jpg",
+                "title": "Bread Omlette",
+                "readyInMinutes": 45,
+                "servings": 1,
+                "sourceUrl": "https://www.foodista.com/recipe/2M6MVKZT/bread-omlette"
+              },
+              {
+                "id": 716297,
+                "image": "breaded-shrimp-and-spicy-mayo-716297.jpg",
+                "imageType": "jpg",
+                "title": "Breaded Shrimp and Spicy Mayo Appetizer",
+                "readyInMinutes": 20,
+                "servings": 4,
+                "sourceUrl": "https://www.afrolems.com/2013/10/13/breaded-shrimp-and-spicy-mayo/"
+              },
+              {
+                "id": 633587,
+                "image": "Baked-Egg-Linguine-With-Onion--Scallion--and-Umame-633587.jpg",
+                "imageType": "jpg",
+                "title": "Baked Egg Linguine With Onion, Scallion, and Umame",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/RGHJRTXN/baked-egg-linguine-with-onion-scallion-and-umame"
+              }
+            ],
+            "nutrients": {
+              "calories": 2000.08,
+              "protein": 92.39,
+              "fat": 88.68,
+              "carbohydrates": 205.09
+            }
+          },
+          "thursday": {
+            "meals": [
+              {
+                "id": 643857,
+                "image": "Frittata-643857.jpg",
+                "imageType": "jpg",
+                "title": "Frittata",
+                "readyInMinutes": 45,
+                "servings": 2,
+                "sourceUrl": "https://www.foodista.com/recipe/SNFFG2VB/frittata"
+              },
+              {
+                "id": 650119,
+                "image": "Linguine-Alla-Carbonara-650119.jpg",
+                "imageType": "jpg",
+                "title": "Linguine Alla Carbonara",
+                "readyInMinutes": 30,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/X4N72XB2/linguine-alla-carbonara"
+              },
+              {
+                "id": 640994,
+                "image": "Cuban-Style-Pork-Medallions-640994.jpg",
+                "imageType": "jpg",
+                "title": "Cuban Style Pork Medallions",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/8Q7D45LK/cuban-style-pork-medallions"
+              }
+            ],
+            "nutrients": {
+              "calories": 2000.18,
+              "protein": 158.87,
+              "fat": 97.75,
+              "carbohydrates": 117.33
+            }
+          },
+          "friday": {
+            "meals": [
+              {
+                "id": 644914,
+                "image": "Glutinous-Rice-Poppy-Muffins-644914.jpg",
+                "imageType": "jpg",
+                "title": "Glutinous Rice Poppy Muffins",
+                "readyInMinutes": 45,
+                "servings": 10,
+                "sourceUrl": "https://www.foodista.com/recipe/4RBVSBHC/glutinous-rice-poppy-muffins"
+              },
+              {
+                "id": 650377,
+                "image": "Low-Carb-Brunch-Burger-650377.jpg",
+                "imageType": "jpg",
+                "title": "Low Carb Brunch Burger",
+                "readyInMinutes": 30,
+                "servings": 2,
+                "sourceUrl": "https://www.foodista.com/recipe/5SPTY657/low-carb-brunch-burger"
+              },
+              {
+                "id": 32579,
+                "image": "tuna_spaghetti_with_fava_beans-32579.jpg",
+                "imageType": "jpg",
+                "title": "Tuna Spaghetti With Fava Beans",
+                "readyInMinutes": 20,
+                "servings": 2,
+                "sourceUrl": "https://www.foodista.com/recipe/8ZFSYNTB/tuna-spaghetti-with-fava-beans"
+              }
+            ],
+            "nutrients": {
+              "calories": 1999.89,
+              "protein": 103.94,
+              "fat": 122.03,
+              "carbohydrates": 127.69
+            }
+          },
+          "saturday": {
+            "meals": [
+              {
+                "id": 635964,
+                "image": "Bread-Omlette-635964.jpg",
+                "imageType": "jpg",
+                "title": "Bread Omlette",
+                "readyInMinutes": 45,
+                "servings": 1,
+                "sourceUrl": "https://www.foodista.com/recipe/2M6MVKZT/bread-omlette"
+              },
+              {
+                "id": 1095827,
+                "image": "ginger-garlic-and-lime-chicken-thighs-with-escarole-salad-1095827.jpg",
+                "imageType": "jpg",
+                "title": "Ginger-Garlic and Lime Chicken Thighs with Escarole Salad",
+                "readyInMinutes": 30,
+                "servings": 6,
+                "sourceUrl": "https://www.foodista.com/recipe/84ZD6N5S/ginger-garlic-and-lime-chicken-thighs-with-escarole-salad"
+              },
+              {
+                "id": 632946,
+                "image": "Asparagus-Parmesan-Frittata-632946.jpg",
+                "imageType": "jpg",
+                "title": "Asparagus Parmesan Frittata",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/743BV5DP/asparagus-parmesan-frittata"
+              }
+            ],
+            "nutrients": {
+              "calories": 1999.8,
+              "protein": 111.7,
+              "fat": 119.5,
+              "carbohydrates": 118.92
+            }
+          },
+          "sunday": {
+            "meals": [
+              {
+                "id": 653270,
+                "image": "Nori-Seaweed-Muffins-653270.jpg",
+                "imageType": "jpg",
+                "title": "Nori Seaweed Muffins",
+                "readyInMinutes": 45,
+                "servings": 12,
+                "sourceUrl": "https://www.foodista.com/recipe/BH2PNBXN/nori-seaweed-muffins"
+              },
+              {
+                "id": 1095827,
+                "image": "ginger-garlic-and-lime-chicken-thighs-with-escarole-salad-1095827.jpg",
+                "imageType": "jpg",
+                "title": "Ginger-Garlic and Lime Chicken Thighs with Escarole Salad",
+                "readyInMinutes": 30,
+                "servings": 6,
+                "sourceUrl": "https://www.foodista.com/recipe/84ZD6N5S/ginger-garlic-and-lime-chicken-thighs-with-escarole-salad"
+              },
+              {
+                "id": 654568,
+                "image": "Panned-Veal-Chop-654568.jpg",
+                "imageType": "jpg",
+                "title": "Panned Veal Chop",
+                "readyInMinutes": 45,
+                "servings": 4,
+                "sourceUrl": "https://www.foodista.com/recipe/J8GR258F/panned-veal-chop"
+              }
+            ],
+            "nutrients": {
+              "calories": 2000.05,
+              "protein": 112.81,
+              "fat": 125.53,
+              "carbohydrates": 102.65
+            }
+          }
+        }
+      }
     }
   ],
   "reviews": [

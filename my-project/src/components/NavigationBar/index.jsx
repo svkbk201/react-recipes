@@ -56,6 +56,7 @@ const NavigationBar = () => {
             <Link to="/" className="user-name">{user?.name}</Link>
             <Link to="/favorites" className="nav-btn">❤️ Favorites</Link>
             <Link to="/meal-planner" className="nav-btn">📅 Meal Planner</Link>
+            <Link to="/saved-meal-plans" className="nav-btn">🗂️ My Meal Plans</Link>
             <Link to="/advanced-search" className="nav-btn">🔍 Advanced Search</Link>
 
             <span className="pending-orders">

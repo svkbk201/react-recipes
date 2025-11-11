@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import AdvancedSearch from "./pages/AdvancedSearch"
+import MealPlanner from "./pages/MealPlanner";
+import SavedPlans from "./pages/MealPlanner/SavedPlans";
+import RecipeDetails from "./pages/RecipeDetails";
 
 import NavigationBar from "./components/NavigationBar";
 import GuestPage from "./pages/GuestPage";
@@ -40,6 +43,9 @@ function App() {
             <Route path="/cart" element={<CartManager />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/advanced-search" element={<AdvancedSearch />} />
+            <Route path="/meal-planner" element={<MealPlanner />} />
+            <Route path="/saved-meal-plans" element={<SavedPlans />} />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
           </>
         )}
 
